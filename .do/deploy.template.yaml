@@ -1,21 +1,17 @@
 spec:
   name: nextjs-inngest-sampleApp
-
-  # SAFEST: define routes at top-level and point to the service by name
-  routes:
-    - path: /
-      service: web
-
   services:
     - name: web
       environment_slug: node-js
       instance_size_slug: apps-d-2vcpu-4gb
       instance_count: 1
       http_port: 3000
+      routes:
+        - path: /
       git:
         repo_clone_url: https://github.com/zasghar26/Inngest-sampleApp.git
         branch: main
-      # If you DON'T have a real package-lock.json, use npm install (NOT npm ci)
+      # Use npm install if you don't have a real package-lock.json committed
       build_command: "npm install --no-audit --no-fund && npm run build"
       run_command: "npm run start"
       envs:
