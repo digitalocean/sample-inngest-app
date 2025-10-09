@@ -3,7 +3,7 @@ spec:
   services:
     - name: web
       environment_slug: node-js
-      instance_size_slug: basic-m
+      instance_size_slug: apps-d-2vcpu-4gb
       instance_count: 1
       http_port: 3000
       routes:
