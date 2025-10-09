@@ -1,0 +1,30 @@
+spec:
+  name: nextjs-inngest-sampleApp
+  services:
+    - name: web
+      environment_slug: node-js
+      instance_size_slug: basic-xxs
+      instance_count: 1
+      http_port: 3000
+      routes:
+        - path: /
+      git:
+        repo_clone_url: https://github.com/zasghar26/Inngest-sampleApp.git
+        branch: main
+      build_command: "npm ci && npm run build"
+      run_command: "npm run start"
+      envs:
+        - key: INNGEST_APP_ID
+          value: nextjs-inngest-sampleApp
+        - key: INNGEST_APP_NAME
+          value: Next+Inngest DO App
+        - key: INNGEST_ENV
+          value: prod
+        - key: INNGEST_EVENT_KEY
+          type: SECRET
+          scope: RUN_TIME
+        - key: INNGEST_SIGNING_KEY
+          type: SECRET
+          scope: RUN_TIME
+        - key: NODE_ENV
+          value: production
