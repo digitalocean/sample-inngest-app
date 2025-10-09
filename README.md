@@ -2,7 +2,7 @@
 ### A) One-click template (Deploy to DO)
 
 [![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](
-https://cloud.digitalocean.com/apps/new?repo=https://github.com/zasghar26/Inngest-sampleApp/tree/main=.do/app.yaml
+https://cloud.digitalocean.com/apps/new?repo=https://github.com/zasghar26/Inngest-sampleApp/tree/main
 )
 
 Next.js + Inngest on DigitalOcean App Platform
