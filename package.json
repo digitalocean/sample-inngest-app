@@ -2,10 +2,11 @@
   "name": "nextjs-inngest-doapp",
   "version": "1.0.0",
   "private": true,
+  "engines": { "node": ">=18.17 <23" },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p ${PORT:-3000}"
+    "start": "next start -p $PORT"
   },
   "dependencies": {
     "inngest": "^3.16.0",
