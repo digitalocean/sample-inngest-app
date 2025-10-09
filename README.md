@@ -1,3 +1,13 @@
+
+### A) One-click template (Deploy to DO)
+1. Edit `.do/deploy.template.yaml` and set `TARGET_URL`.
+2. Push to GitHub.
+3. Add this button to your README (optional):
+
+[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](
+https://cloud.digitalocean.com/apps/new?repo=https://github.com/zasghar26/inngest-sampleApp/tree/main&spec=.do/app.yaml
+)
+
 Next.js + Inngest on DigitalOcean App Platform
 
 This is a minimal example showing two ways to run Inngest:
