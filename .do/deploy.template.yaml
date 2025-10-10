@@ -12,7 +12,7 @@ spec:
         repo_clone_url: https://github.com/zasghar26/Inngest-sampleApp.git
         branch: main
       # Use npm install if you don't have a real package-lock.json committed
-      build_command: "npm install --no-audit --no-fund && npm run build"
+      build_command: "npm ci && npm run build"
       run_command: "npm run start"
       envs:
         - key: INNGEST_APP_ID
