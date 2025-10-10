@@ -3,29 +3,38 @@ spec:
   services:
     - name: web
       environment_slug: node-js
-      instance_size_slug: apps-d-2vcpu-4gb
+      instance_size_slug: basic-xxs
       instance_count: 1
       http_port: 3000
       routes:
         - path: /
-      git:
-        repo_clone_url: https://github.com/zasghar26/Inngest-sampleApp.git
+      github:
+        repo: zasghar26/inngest-sampleApp
         branch: main
-      # Use npm install if you don't have a real package-lock.json committed
+        deploy_on_push: true
       build_command: "npm ci && npm run build"
       run_command: "npm run start"
       envs:
+        # Required for Inngest client
         - key: INNGEST_APP_ID
           value: nextjs-inngest-sampleApp
+
+        # Optional metadata
         - key: INNGEST_APP_NAME
           value: Next+Inngest DO App
         - key: INNGEST_ENV
           value: prod
+
+        # Required if you call inngest.send() from the server (we do in /api/signup)
         - key: INNGEST_EVENT_KEY
           type: SECRET
           scope: RUN_TIME
+
+        # Required for verifying signed requests from Inngest to /api/inngest
         - key: INNGEST_SIGNING_KEY
           type: SECRET
           scope: RUN_TIME
+
+        # Example: set Node/Next tuning as needed
         - key: NODE_ENV
           value: production
