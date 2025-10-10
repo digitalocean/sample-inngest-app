@@ -8,7 +8,7 @@ spec:
       routes:
         - path: /
       github:
-        repo: zasghar26/Innges t-sampleApp
+        repo: #zasghar26/Inngest-sampleApp#
         branch: main
         deploy_on_push: true
       build_command: "npm ci && npm run build"
