@@ -21,8 +21,6 @@ spec:
         # Optional metadata
         - key: INNGEST_APP_NAME
           value: Next+Inngest DO App
-        - key: INNGEST_ENV
-          value: prod
 
         # Required if you call inngest.send() from the server
         - key: INNGEST_EVENT_KEY
