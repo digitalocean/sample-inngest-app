@@ -34,10 +34,3 @@ spec:
         - key: INNGEST_SIGNING_KEY
           type: SECRET
           scope: RUN_TIME
-
-        # Recommended: pin Node version
-        - key: NODE_VERSION
-          value: "20"
-
-        - key: NODE_ENV
-          value: production
