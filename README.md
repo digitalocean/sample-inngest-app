@@ -10,7 +10,7 @@ It includes a one-click deploy template and an App Spec for manual or CLI deploy
 
 Deploy this app to your own DigitalOcean account in one click:
 
-[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/zasghar26/Inngest-sampleApp/tree/main)
+[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/zasghar26/Inngest-sampleApp/tree/main&spec=.do/deploy.template.yaml)
 
 
 When clicked, DigitalOcean App Platform will preload your `.do/deploy.template.yaml` file.  
