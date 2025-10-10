@@ -12,7 +12,7 @@ spec:
         repo: zasghar26/Inngest-sampleApp
         branch: main
         deploy_on_push: true
-      build_command: "npm install --no-audit --no-fund && npm run build"
+      build_command: "npm ci && npm run build"
       run_command: "npm run start"
       envs:
         # Required for Inngest client
