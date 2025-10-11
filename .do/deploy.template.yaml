@@ -17,9 +17,6 @@ spec:
         - key: INNGEST_APP_ID
           value: nextjs-inngest-sampleApp
 
-        - key: INNGEST_APP_NAME
-          value: Next+Inngest DO App
-
         - key: INNGEST_EVENT_KEY
           type: SECRET
           scope: RUN_TIME
