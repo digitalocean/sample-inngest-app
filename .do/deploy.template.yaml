@@ -7,27 +7,23 @@ spec:
       instance_count: 2
       routes:
         - path: /
-      github:
-        repo: zasghar26/Inngest-sampleApp
-        branch: main
-        deploy_on_push: true
-      build_command: "npm ci && npm run build"
-      run_command: "npm run start"
+      image:
+        registry_type: DOCR
+        repository: htmxreg/inngest-sampleapp
+        digest: "sha256:b2b7fc6823fa311f9fe64a3e323790c6f632de15bd909c85b5ee3cb46036a43f"
+      http_port: 3000
+
       envs:
-        # Required for Inngest client
         - key: INNGEST_APP_ID
           value: nextjs-inngest-sampleApp
 
-        # Optional metadata
         - key: INNGEST_APP_NAME
           value: Next+Inngest DO App
 
-        # Required if you call inngest.send() from the server
         - key: INNGEST_EVENT_KEY
           type: SECRET
           scope: RUN_TIME
 
-        # Required for verifying signed requests from Inngest to /api/inngest
         - key: INNGEST_SIGNING_KEY
           type: SECRET
           scope: RUN_TIME
