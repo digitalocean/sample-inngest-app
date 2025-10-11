@@ -6,7 +6,7 @@ spec:
       image:
         registry_type: DOCR
         repository: htmxreg/inngest-sampleapp
-        digest: "sha256:REPLACE_WITH_YOUR_IMAGE_DIGEST"
+        digest: "sha256:b2b7fc6823fa311f9fe64a3e323790c6f632de15bd909c85b5ee3cb46036a43f"
       http_port: 3000
       # Distroless final image has entrypoint=node; command is the script:
       run_command: >-
