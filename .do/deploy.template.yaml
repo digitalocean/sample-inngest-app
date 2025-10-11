@@ -16,17 +16,9 @@ spec:
         - path: /
 
       envs:
-        # Bind to DO's provided port
-        - key: PORT
-          scope: RUN_AND_BUILD_TIME
-          value: "3000"
 
-        # Required if you call inngest.send() from the server
         - key: INNGEST_EVENT_KEY
-          scope: RUN_AND_BUILD_TIME
           type: SECRET
 
-        # Required for verifying signed requests from Inngest to /api/inngest
         - key: INNGEST_SIGNING_KEY
-          scope: RUN_AND_BUILD_TIME
           type: SECRET
