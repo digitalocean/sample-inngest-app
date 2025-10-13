@@ -20,6 +20,7 @@ Deploy this app to your own DigitalOcean account in one click:
 * When clicked, DigitalOcean App Platform will preload your `.do/deploy.template.yaml` file.  
 * Add Signing Key and Event Key from inngest add-on portal, currently app platform contains dummay values, then click **Create App**.
 
+
 ---
 
 ## ⚙️ Manual Deployment (CLI)
