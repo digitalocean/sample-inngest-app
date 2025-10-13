@@ -14,7 +14,7 @@ Note: Following these steps may result in charges for the use of DigitalOcean se
 
 Deploy this app to your own DigitalOcean account in one click:
 
-[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/zasghar26/Inngest-sampleApp/tree/main&spec=.do/deploy.template.yaml)
+[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/digitalocean/inngest-sample-app/tree/main&spec=.do/deploy.template.yaml)
 
 
 * When clicked, DigitalOcean App Platform will preload your `.do/deploy.template.yaml` file.  
