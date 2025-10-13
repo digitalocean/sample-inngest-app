@@ -28,6 +28,25 @@ By using this template, you get:
 
 ---
 
+## Application Components
+
+* Next.js Frontend
+  * Provides a UI that trigger events. For example, a user action calls /api/submit which sends an event to Inngest.
+
+* Inngest Add-on
+  * The managed Inngest service is the event ingestion layer. It receives events from your application and dispatches them to workflows/functions.
+
+* Inngest Functions / Workflows
+  * Background jobs or workflows defined in your code. They get invoked when events match. You can include retries, scheduling, steps, etc.
+
+* .do/deploy.template.yaml
+  * The DigitalOcean App Platform blueprint: defines how to deploy the frontend, the functions, the environment variables, etc.
+
+* Environment Variables
+  * Keys like INNGEST_EVENT_KEY, INNGEST_SIGNING_KEY, etc. These secure event submission and verification.
+
+---
+
 ## 🚀 One-Click Deploy
 
 Deploy this app to your own DigitalOcean account in one click:
