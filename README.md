@@ -47,6 +47,22 @@ By using this template, you get:
 
 ---
 
+## Example Use Cases
+
+You can use this template to build:
+
+* Delayed or scheduled email sending flows. For example, automatically drafting personalized follow-up emails using a GenAI model that adapts tone and content based on user behavior.
+
+* Workflow orchestration for user onboarding or post-signup tasks. Where an Agentic AI assistant dynamically guides new users, generates tailored recommendations, or sets up personalized configurations.
+
+* Webhook event processing (e.g., for payments, notifications), enhanced with AI that classifies or summarizes incoming data, detects anomalies, or triggers intelligent routing decisions.
+
+* Long-running, multi-step background jobs — where an Agentic AI can reason over intermediate outputs, make autonomous decisions, and retry or branch workflows as needed.
+
+* AI-powered notifications — where the system doesn’t just send alerts, but also interprets context, suggests next steps, or triggers remediation actions.
+
+---
+
 ## 🚀 One-Click Deploy
 
 Deploy this app to your own DigitalOcean account in one click:
