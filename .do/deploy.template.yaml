@@ -5,7 +5,7 @@ spec:
     - name: web
       http_port: 3000
       github:
-        repo: zasghar26/Inngest-sampleApp
+        repo: digitalocean/inngest-sample-app
         branch: main
         deploy_on_push: true
       build_command: "npm ci && npm run build"
