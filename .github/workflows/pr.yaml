@@ -1,0 +1,36 @@
+name: PR Build
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Run doctl build command
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@main
+
+      - name: Install doctl
+        uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+
+      - name: Run doctl apps dev build
+        run: doctl apps dev build --no-cache
+      
+      - name: Start App container in background
+        run: docker run -d -e PORT=8080 -p 8080:8080 web:dev
+
+      - name: Wait for App to be ready and test
+        run: |
+          sleep 5
+          code=$(curl -o /dev/null -s -w "%{http_code}" http://localhost:8080)
+          if [ $code -ne 200 ]; then
+            echo "App returned unexpected status code: $code"
+            exit 1
+          fi
