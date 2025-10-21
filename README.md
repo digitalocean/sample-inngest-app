@@ -3,16 +3,37 @@
 Integrating DigitalOcean App Platform with Inngest allows you to concentrate on coding by enabling direct deployments from GitHub pushes. Both the App Platform and Inngest automatically scale your application without the need for any infrastructure setup, making this an ideal solution for SaaS and e-commerce websites.
 
 A ready-to-deploy blueprint demonstrating how to build and run an event-driven Next.js app using Inngest on DigitalOcean App Platform.
-
 This template helps you see how to wire up frontend triggers, background workflows, and deployment—all in one repo.
+ 
+**Note**: Following these steps may result in charges for the use of DigitalOcean services.
 
-Note: Following these steps may result in charges for the use of DigitalOcean services.
+### Requirements
 
-# Requirements
-* You need a DigitalOcean account. If you do not already have one, first sign up.
+* You need a DigitalOcean account. If you do not already have one, first [sign up](https://cloud.digitalocean.com/registrations/new).
 * You need an inngest add-on. If you do not already have one, add it from SaaS add-Ons. 
 
----
+## 🚀 Deploy the App
+
+Click the following button to deploy the app to App Platform. If you are not currently logged in with your DigitalOcean account, this button prompts you to log in.
+
+[![Deploy to DigitalOcean](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/digitalocean/sample-inngest-app/tree/main)
+
+**Note**: Add Signing Key and Event Key from inngest add-on portal in Environment Variables during the **Create App** Flow.
+
+## ⚙️ Manual Deployment (CLI)
+
+If you prefer using the DigitalOcean CLI or need to deploy a private repo:
+
+```bash
+# Authenticate once
+doctl auth init
+
+# Create a new app from the spec
+doctl apps create --spec .do/deploy.template.yaml
+
+# Update an existing app
+doctl apps update <APP_ID> --spec .do/deploy.template.yaml
+```
 
 ## What This Blueprint Gives You
 
@@ -25,8 +46,6 @@ By using this template, you get:
 * A .do/deploy.template.yaml (or equivalent) configuration to deploy everything via DigitalOcean App Platform
 
 * A jumpstart for building your own production event-driven systems, with deployment, secrets, and orchestration
-
----
 
 ## Application Components
 
@@ -45,8 +64,6 @@ By using this template, you get:
 * Environment Variables
   * Keys like INNGEST_EVENT_KEY, INNGEST_SIGNING_KEY, etc. These secure event submission and verification.
 
----
-
 ## Example Use Cases
 
 You can use this template to build:
@@ -60,32 +77,3 @@ You can use this template to build:
 * Long-running, multi-step background jobs — where an Agentic AI can reason over intermediate outputs, make autonomous decisions, and retry or branch workflows as needed.
 
 * AI-powered notifications — where the system doesn’t just send alerts, but also interprets context, suggests next steps, or triggers remediation actions.
-
----
-
-## 🚀 One-Click Deploy
-
-Deploy this app to your own DigitalOcean account in one click:
-
-[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/digitalocean/inngest-sample-app/tree/main&spec=.do/deploy.template.yaml)
-
-
-* When clicked, DigitalOcean App Platform will preload your `.do/deploy.template.yaml` file.  
-* Add Signing Key and Event Key from inngest add-on portal, currently app platform contains dummay values, then click **Create App**.
-
-
----
-
-## ⚙️ Manual Deployment (CLI)
-
-If you prefer using the DigitalOcean CLI or need to deploy a private repo:
-
-```bash
-# Authenticate once
-doctl auth init
-
-# Create a new app from the spec
-doctl apps create --spec .do/deploy.template.yaml
-
-# Update an existing app
-doctl apps update <APP_ID> --spec .do/deploy.template.yaml
