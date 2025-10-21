@@ -1,24 +1,17 @@
 spec:
   name: nextjs-inngest-sampleapp
-  region: nyc
   services:
     - name: web
-      http_port: 3000
       github:
-        repo: digitalocean/inngest-sample-app
+        repo: digitalocean/sample-inngest-app
         branch: main
         deploy_on_push: true
       build_command: "npm ci && npm run build"
       run_command: "npm run start"
-      instance_size_slug: apps-d-2vcpu-4gb
-      instance_count: 2
       routes:
         - path: /
-
       envs:
-
         - key: INNGEST_EVENT_KEY
           type: SECRET
-
         - key: INNGEST_SIGNING_KEY
           type: SECRET
