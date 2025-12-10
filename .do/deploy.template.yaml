@@ -2,8 +2,8 @@ spec:
   name: nextjs-inngest-sampleapp
   services:
     - name: web
-      github:
-        repo: digitalocean/sample-inngest-app
+      git:
+        repo: https://github.com/digitalocean/sample-inngest-app.git
         branch: main
         deploy_on_push: true
       build_command: "npm ci && npm run build"
