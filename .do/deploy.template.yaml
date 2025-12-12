@@ -3,9 +3,8 @@ spec:
   services:
     - name: web
       git:
-        repo: https://github.com/digitalocean/sample-inngest-app.git
+        repo_clone_url: https://github.com/digitalocean/sample-inngest-app.git
         branch: main
-        deploy_on_push: true
       build_command: "npm ci && npm run build"
       run_command: "npm run start"
       routes:
