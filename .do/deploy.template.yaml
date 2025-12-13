@@ -14,3 +14,5 @@ spec:
           type: SECRET
         - key: INNGEST_SIGNING_KEY
           type: SECRET
+      instance_count: 1
+      instance_size_slug: apps-s-1vcpu-1gb
